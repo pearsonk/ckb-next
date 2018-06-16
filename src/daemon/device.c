@@ -62,12 +62,6 @@ int _start_dev(usbdevice* kb, int makeactive){
         kb->features &= ~FEAT_HWLOAD;
 
     ///
-    /// hwload isn't supported yet on this hardware format.
-    ///
-    if(USES_FILE_HWSAVE(kb))
-        kb->features &= ~FEAT_HWLOAD;
-
-    ///
     /// - Now check if device needs a firmware update.
     /// If so, set it up and leave the function without error.
     ///
