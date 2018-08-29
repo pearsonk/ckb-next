@@ -1,6 +1,8 @@
 #ifndef ANIMADDDIALOG_H
 #define ANIMADDDIALOG_H
 
+#include <memory>
+
 #include <QDialog>
 #include "animscript.h"
 #include "kblight.h"
@@ -26,7 +28,7 @@ private slots:
     void on_previewBox_clicked(bool checked);
 
 private:
-    Ui::AnimAddDialog *ui;
+    const std::unique_ptr<Ui::AnimAddDialog> ui;
     QList<const AnimScript*> scripts;
 
     KbLight* _light;

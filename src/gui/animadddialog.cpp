@@ -13,7 +13,6 @@ AnimAddDialog::AnimAddDialog(QWidget *parent, KbLight *light, const QStringList 
 }
 
 AnimAddDialog::~AnimAddDialog(){
-    delete ui;
     _light->stopPreview();
 }
 
