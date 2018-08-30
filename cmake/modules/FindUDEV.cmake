@@ -79,6 +79,13 @@ find_path(UDEV_INCLUDE_DIR
         )
 
 include(FindPackageHandleStandardArgs)
+
+get_cmake_property(_variableNames VARIABLES)
+list (SORT _variableNames)
+foreach (_variableName ${_variableNames})
+    message(STATUS "${_variableName}=${${_variableName}}")
+endforeach()
+
 find_package_handle_standard_args(UDEV
         DEFAULT_MSG
         UDEV_LIBRARY
